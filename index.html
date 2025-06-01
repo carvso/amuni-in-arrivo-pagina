@@ -1,26 +1,266 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>amuni-in-arrivo-pagina</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amunì Group - Pagina in costruzione</title>
+    <meta name="description" content="Amunì Group - Premium Italian frozen ready meals. La nostra piattaforma è in costruzione." />
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <meta property="og:title" content="amuni-in-arrivo-pagina" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+        body {
+            font-family: system-ui, -apple-system, "Helvetica Neue", "Inter", Arial, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+            position: relative;
+        }
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        /* Background pattern */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(163, 230, 53, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(182, 255, 122, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(163, 230, 53, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 3rem;
+            background: rgba(163, 230, 53, 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid rgba(163, 230, 53, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo svg {
+            width: 60px;
+            height: 60px;
+            fill: #a3e635;
+        }
+
+        .main-content {
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 4rem;
+        }
+
+        .headline {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a3e635 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+        }
+
+        .subheadline {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            color: #e2e8f0;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        .closing {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            color: #a3e635;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .icons-container {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(163, 230, 53, 0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            min-width: 140px;
+        }
+
+        .icon-item:hover {
+            transform: translateY(-5px);
+            background: rgba(163, 230, 53, 0.1);
+            border-color: rgba(163, 230, 53, 0.4);
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #a3e635 0%, #b6ff7a 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 25px rgba(163, 230, 53, 0.3);
+        }
+
+        .icon-circle svg {
+            width: 28px;
+            height: 28px;
+            fill: #0f172a;
+        }
+
+        .icon-label {
+            font-size: 0.9rem;
+            color: #cbd5e1;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #64748b;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        /* Floating animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .logo {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .icon-item:nth-child(1) { animation: float 3s ease-in-out infinite 0.5s; }
+        .icon-item:nth-child(2) { animation: float 3s ease-in-out infinite 1s; }
+        .icon-item:nth-child(3) { animation: float 3s ease-in-out infinite 1.5s; }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .icons-container {
+                gap: 1.5rem;
+            }
+            
+            .icon-item {
+                min-width: 120px;
+                padding: 1rem;
+            }
+            
+            .icon-circle {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .icon-circle svg {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo placeholder -->
+        <div class="logo">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 2L2 7v10c0 5.55 3.84 9.74 9 11 5.16-1.26 9-5.45 9-11V7l-10-5z"/>
+                <path d="M8 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none"/>
+            </svg>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <h1 class="headline">🍽️ Pagina in costruzione</h1>
+            <p class="subheadline">
+                Stiamo ultimando la nostra piattaforma per portare i nostri piatti ovunque.
+            </p>
+            <p class="closing">
+                A presto con la nostra bontà surgelata.
+            </p>
+        </div>
+
+        <!-- Icons section -->
+        <div class="icons-container">
+            <!-- Tecnologia -->
+            <div class="icon-item">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                        <circle cx="12" cy="12" r="4"/>
+                    </svg>
+                </div>
+                <span class="icon-label">Tecnologia</span>
+            </div>
+
+            <!-- Freschezza -->
+            <div class="icon-item">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2v6.5l3 3-3 3V20l7-7-7-7z"/>
+                        <path d="M5 12l7-7v6.5l-3 3 3 3V20l-7-7z"/>
+                        <circle cx="12" cy="12" r="1"/>
+                    </svg>
+                </div>
+                <span class="icon-label">Freschezza</span>
+            </div>
+
+            <!-- Rapidità -->
+            <div class="icon-item">
+                <div class="icon-circle">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"/>
+                        <polyline points="12,6 12,12 16,14"/>
+                    </svg>
+                </div>
+                <span class="icon-label">Rapidità</span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            © 2025 Amunì Group - Premium Italian Frozen Ready Meals
+        </div>
+    </div>
+</body>
 </html>

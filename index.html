@@ -9,18 +9,19 @@
     
     <style>
         :root {
-            /* Amunì Brand Colors */
-            --amuni-darkgreen: #0B3B29;
+            /* Amunì Premium Black & Gold Colors */
+            --amuni-black: #000000;
+            --amuni-charcoal: #111111;
+            --amuni-dark-grey: #1F1F1F;
+            --amuni-medium-grey: #292929;
             --amuni-gold: #D4AF37;
-            --amuni-green: #164734;
+            --amuni-bright-gold: #FFD700;
             --amuni-cream: #FFF8E1;
             --amuni-lightcream: #FFFBF2;
-            --amuni-dark: #0B3B29;
             
-            /* Theme Variants */
+            /* Premium Theme */
             --primary: #121212;
             --secondary: #D4AF37;
-            --accent: #556B2F;
             --background: #F9F5EB;
             --cream: #DCC9A3;
             --dark: #722F37;
@@ -39,14 +40,14 @@
 
         body {
             font-family: system-ui, -apple-system, "Helvetica Neue", "Inter", Arial, sans-serif;
-            background: linear-gradient(135deg, var(--amuni-darkgreen) 0%, var(--amuni-green) 50%, var(--amuni-dark) 100%);
+            background: linear-gradient(135deg, var(--amuni-black) 0%, var(--amuni-charcoal) 30%, var(--amuni-dark-grey) 70%, var(--amuni-medium-grey) 100%);
             min-height: 100vh;
             color: var(--amuni-lightcream);
             overflow-x: hidden;
             position: relative;
         }
 
-        /* Enhanced background pattern with Sicilian touches */
+        /* Enhanced background pattern with premium black touches */
         body::before {
             content: '';
             position: absolute;
@@ -62,7 +63,7 @@
             pointer-events: none;
         }
 
-        /* Sicilian pattern overlay */
+        /* Premium pattern overlay */
         body::after {
             content: '';
             position: absolute;
@@ -96,7 +97,7 @@
             width: 140px;
             height: 140px;
             margin-bottom: 3rem;
-            background: linear-gradient(135deg, var(--amuni-gold) 0%, #FFD700 100%);
+            background: linear-gradient(135deg, var(--amuni-gold) 0%, var(--amuni-bright-gold) 100%);
             border-radius: 25px;
             display: flex;
             align-items: center;
@@ -114,7 +115,7 @@
             content: '';
             position: absolute;
             inset: -2px;
-            background: linear-gradient(135deg, var(--amuni-gold), #FFD700, var(--amuni-gold));
+            background: linear-gradient(135deg, var(--amuni-gold), var(--amuni-bright-gold), var(--amuni-gold));
             border-radius: 27px;
             z-index: -1;
             filter: blur(8px);
@@ -124,7 +125,7 @@
         .logo svg {
             width: 70px;
             height: 70px;
-            fill: var(--amuni-darkgreen);
+            fill: var(--amuni-black);
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
 
@@ -133,7 +134,7 @@
             max-width: 700px;
             margin-bottom: 4rem;
             padding: 2rem;
-            background: rgba(255,248,225,0.08);
+            background: rgba(17,17,17,0.3);
             border-radius: 20px;
             border: 1px solid var(--gold-shadow-light);
             backdrop-filter: blur(20px);
@@ -143,7 +144,7 @@
             font-size: clamp(2.8rem, 5.5vw, 4.5rem);
             font-weight: 800;
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--amuni-lightcream) 0%, var(--amuni-gold) 50%, #FFD700 100%);
+            background: linear-gradient(135deg, var(--amuni-lightcream) 0%, var(--amuni-gold) 50%, var(--amuni-bright-gold) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -158,7 +159,7 @@
             margin-bottom: 2rem;
             line-height: 1.6;
             font-weight: 400;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
         }
 
         .closing {
@@ -183,7 +184,7 @@
             align-items: center;
             gap: 1.2rem;
             padding: 2rem 1.5rem;
-            background: linear-gradient(135deg, rgba(255,248,225,0.12) 0%, rgba(212,175,55,0.08) 100%);
+            background: linear-gradient(135deg, rgba(17,17,17,0.4) 0%, rgba(31,31,31,0.3) 100%);
             border-radius: 20px;
             border: 1px solid var(--gold-shadow-light);
             backdrop-filter: blur(15px);
@@ -210,24 +211,24 @@
 
         .icon-item:hover {
             transform: translateY(-8px) scale(1.02);
-            background: linear-gradient(135deg, rgba(212,175,55,0.15) 0%, rgba(255,248,225,0.15) 100%);
+            background: linear-gradient(135deg, rgba(41,41,41,0.5) 0%, rgba(17,17,17,0.4) 100%);
             border-color: var(--amuni-gold);
             box-shadow: 
                 0 20px 40px var(--gold-shadow-medium),
-                0 10px 20px rgba(0,0,0,0.2);
+                0 10px 20px rgba(0,0,0,0.3);
         }
 
         .icon-circle {
             width: 70px;
             height: 70px;
-            background: linear-gradient(135deg, var(--amuni-gold) 0%, #FFD700 100%);
+            background: linear-gradient(135deg, var(--amuni-gold) 0%, var(--amuni-bright-gold) 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 
                 0 10px 30px var(--gold-shadow-medium),
-                0 4px 15px rgba(0,0,0,0.2),
+                0 4px 15px rgba(0,0,0,0.3),
                 inset 0 1px 0 rgba(255,255,255,0.3);
             position: relative;
         }
@@ -236,7 +237,7 @@
             content: '';
             position: absolute;
             inset: -3px;
-            background: linear-gradient(135deg, var(--amuni-gold), #FFD700);
+            background: linear-gradient(135deg, var(--amuni-gold), var(--amuni-bright-gold));
             border-radius: 50%;
             z-index: -1;
             filter: blur(6px);
@@ -246,7 +247,7 @@
         .icon-circle svg {
             width: 32px;
             height: 32px;
-            fill: var(--amuni-darkgreen);
+            fill: var(--amuni-black);
             filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
         }
 
@@ -255,7 +256,7 @@
             color: var(--amuni-cream);
             font-weight: 600;
             text-align: center;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
             letter-spacing: 0.02em;
         }
 
@@ -268,7 +269,7 @@
             font-size: 0.85rem;
             text-align: center;
             opacity: 0.8;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
         }
 
         /* Enhanced floating animation */
